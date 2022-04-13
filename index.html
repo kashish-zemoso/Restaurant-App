@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Zemoso Restaurant App</title>
+</head>
+<body onload="generateTables(),generateMenu();">
+    <div class="Container">
+        <div class="table">
+            <h3 style="text-align: center;">Tables</h3>
+            <div>
+                <input type="text" id="tableSearch" onkeyup="searchTables()" placeholder="Search for tables..." title="Type in a name">
+            </div>
+            <br>
+            <div id="tableGrid"></div>
+        </div>
+
+        <div class="menu">
+            <h3 style="text-align: center;">Menu</h3>
+            <div>
+                <input type="text" id="foodSearch" onkeyup="searchFoods()" placeholder="Search for foods by Name or category..." title="Type in a name">
+            </div>
+            <br>
+            <div id="menuGrid"></div>
+        </div>
+
+        <div id="modal">
+            <div id="modalHeader">
+                <h3 id="modalHeading" style="display: inline-block;"></h3>
+                <button id="btn" onclick="displayBill()" style="padding:7px; float: right; background: rgb(230, 7, 7);">x</button>
+            </div>
+            <div id="modalBody">
+                <table cellpadding="15px" id="tableBill"></table>
+            </div>
+            <div id="modalFooter" style="border-top: 1px solid black;">
+                <h2 style="display: inline-block;">Total amount :</h2>
+                <h2 id="displaytotal" style="display: inline-block; margin-left: 20px;"></h2><br/>
+                <button class="btn" onclick="clearTable()">Clear Session</button>
+                <button class="btn" onclick="generateBill()">Generate Bill</button>
+            </div>
+        </div>
+    </div>
+    <script type = "text/javascript" src="./app.js"></script>
+</body>
+</html>

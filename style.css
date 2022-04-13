@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  color: black;
+}
+
+body {
+    overflow-x: hidden;
+    background-color:darkgray;
+}
+
+.Container {
+    display: flex;
+    overflow: hidden;
+    height: 115vh;
+    margin-top: -100px;
+    padding-top: 100px;
+    position: relative;
+    width: 100%;
+    backface-visibility: hidden;
+    will-change: overflow;
+}
+
+.table,
+.menu {
+  overflow: auto;
+  height: auto;
+  padding: .5rem;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+}
+
+.table{
+    width: 30%;
+    border-right: 3px solid black;
+}
+
+.menu {
+    flex: 1;
+}
+
+#tableSearch {
+    width: 250px;
+    height: 35px;
+    font-size: 15px;
+}
+
+#foodSearch {
+    width: 600px;
+    height: 35px;
+    font-size: 15px;
+}
+
+input {
+    display: block;
+    align-content: center;
+}
+
+#tableGrid {
+    display: grid;
+    grid-row-gap: 10px;
+}
+
+.gridElementTable {
+    background-color:beige;
+    border: 1px solid grey;
+    padding-bottom: 30px;
+    border-bottom: 2px solid black;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.tableNo {
+    width: 100px;
+}
+      
+.Bill{
+    width: 70px;
+}
+    
+.totalItems {
+    width: 50px;
+}
+
+.gridElementMenu {
+    background-color:beige;
+    border: 1px solid grey;
+    padding-bottom: 40px;
+    border-bottom: 2px solid black;
+    height: 130px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.itemName {
+    font-size: 25px;
+    }
+    
+.price  {
+    font-size: 15px;
+}
+    
+.type {
+    font-size: 15px;
+}
+    
+#modal{
+    display: none;
+    position:  absolute;
+    height: auto;
+    width: 550px;
+    top: 300px;
+    left: 40%;
+    background-color: whitesmoke;
+    text-align: center;
+}
+
+#modalHeader {
+    background-color: skyblue;
+}
+
+#servings {
+    width: 150px;
+    text-align: center;
+}
+
+.btn {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
